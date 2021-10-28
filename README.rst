@@ -71,6 +71,7 @@ Clone the git repository:
 .. code-block:: bash
 
    $ git clone https://github.com/labgrid-project/labgrid
+   $ git checkout <TAG> -b <TAG>_installed_branch
 
 Create and activate a virtualenv for labgrid:
 
@@ -83,7 +84,7 @@ Install labgrid into the virtualenv:
 
 .. code-block:: bash
 
-   $ pip install -r requirements.txt
+   $ python3 -m pip install -r requirements.txt
    $ python setup.py install
 
 Tests can now run via:
