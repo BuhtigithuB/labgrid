@@ -30,7 +30,8 @@ requirements from the `requirements.txt` file:
 .. code-block:: bash
 
     labgrid-venv $ git clone https://github.com/labgrid-project/labgrid
-    labgrid-venv $ cd labgrid && pip install -r requirements.txt
+    labgrid-venv $ git checkout <TAG> -b <TAG>_installed_branch
+    labgrid-venv $ cd labgrid && python3 -m pip install -r requirements.txt
     labgrid-venv $ python3 setup.py install
 
 .. note::
@@ -53,8 +54,8 @@ requirements from the `requirements.txt` file:
 
       .. code-block:: bash
 
-          $ pip uninstall pyserial
-          $ pip install https://github.com/labgrid-project/pyserial/archive/v3.4.0.1.zip#egg=pyserial
+          $ python3 -m pip uninstall pyserial
+          $ python3 -m pip install https://github.com/labgrid-project/pyserial/archive/v3.4.0.1.zip#egg=pyserial
 
    This pyserial version has two fixes for an Issue we found with Serial over IP
    multiplexers. Additionally it reduces the Serial over IP traffic considerably
@@ -82,7 +83,7 @@ seperate requirements file. An example for snmp support is:
 
 .. code-block:: bash
 
-    labgrid-venv $ pip install -r snmp-requirements.txt
+    labgrid-venv $ python3 -m pip install -r snmp-requirements.txt
 
 Onewire
 +++++++
@@ -175,7 +176,7 @@ extra virtualenv and install the dependencies via the requirements file.
     $ virtualenv -p python3 crossbar-venv
     $ source crossbar-venv/bin/activate
     crossbar-venv $ git clone https://github.com/labgrid-project/labgrid
-    crossbar-venv $ cd labgrid && pip install -r crossbar-requirements.txt
+    crossbar-venv $ cd labgrid && python3 -m pip install -r crossbar-requirements.txt
     crossbar-venv $ python setup.py install
 
 All necessary dependencies should be installed now, we can start the coordinator
